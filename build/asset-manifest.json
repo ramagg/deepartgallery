@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/deepartgallery/static/js/main.893ef2a2.chunk.js",
-    "main.js.map": "/deepartgallery/static/js/main.893ef2a2.chunk.js.map",
+    "main.js": "/deepartgallery/static/js/main.299b1fc1.chunk.js",
+    "main.js.map": "/deepartgallery/static/js/main.299b1fc1.chunk.js.map",
     "runtime-main.js": "/deepartgallery/static/js/runtime-main.12f4587f.js",
     "runtime-main.js.map": "/deepartgallery/static/js/runtime-main.12f4587f.js.map",
-    "static/js/2.8244cd23.chunk.js": "/deepartgallery/static/js/2.8244cd23.chunk.js",
-    "static/js/2.8244cd23.chunk.js.map": "/deepartgallery/static/js/2.8244cd23.chunk.js.map",
+    "static/js/2.ab5cbfb3.chunk.js": "/deepartgallery/static/js/2.ab5cbfb3.chunk.js",
+    "static/js/2.ab5cbfb3.chunk.js.map": "/deepartgallery/static/js/2.ab5cbfb3.chunk.js.map",
     "index.html": "/deepartgallery/index.html",
-    "precache-manifest.953dcc263e1149c475b3b17ee4052601.js": "/deepartgallery/precache-manifest.953dcc263e1149c475b3b17ee4052601.js",
+    "precache-manifest.bbd250ef60fb1bb857c8b583dba5f9fb.js": "/deepartgallery/precache-manifest.bbd250ef60fb1bb857c8b583dba5f9fb.js",
     "service-worker.js": "/deepartgallery/service-worker.js",
-    "static/js/2.8244cd23.chunk.js.LICENSE.txt": "/deepartgallery/static/js/2.8244cd23.chunk.js.LICENSE.txt"
+    "static/js/2.ab5cbfb3.chunk.js.LICENSE.txt": "/deepartgallery/static/js/2.ab5cbfb3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.12f4587f.js",
-    "static/js/2.8244cd23.chunk.js",
-    "static/js/main.893ef2a2.chunk.js"
+    "static/js/2.ab5cbfb3.chunk.js",
+    "static/js/main.299b1fc1.chunk.js"
   ]
 }
