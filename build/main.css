@@ -8,6 +8,9 @@ body {
     background: rgb(39, 39, 39);
     font-family: 'Roboto', sans-serif;
 }
+.hide {
+    display: none;
+}
 header {
     margin: 0 50px 15px 50px;
     color: white;
@@ -15,13 +18,17 @@ header {
     text-align: center;
     padding: 15px;
 }
-.App {
+/* .App {
 
-}
+} */
 .artBox {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    user-select: none;
+}
+.imageColumn {
+    width: 350px;
 }
 .actions {
     position: absolute;
@@ -45,8 +52,22 @@ span.imgDwl {
     border-radius: 10px;
     cursor: pointer;
 }
-.detailsCo {
-    display: none;
+span.details {
+    cursor: pointer;
+}
+
+.showDetails {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 100%;
+    font-family: 'Baloo Chettan 2', cursive;
+    background: #00000085;
+    height: 100px;
+    width: 160px;
+    text-align: left;
+    padding: 0 5px;
+    border-radius: 5px 5px 0px 0px;
 }
 .imgContainer {
     display: flex;
@@ -59,6 +80,6 @@ span.imgDwl {
 }
 .imgContainer img{
     border-radius: 7px;
-    width: 350px;
+    width: 340px;
     height: auto;
 }
