@@ -6,7 +6,7 @@ export default function ImageColumn(props) {
     <div className="imageColumn">
       {
         props.imgs.map((item, i) => {
-          return <Artimg key={i} src={`https://ramagg.com/deepartgallery/imgs/${item.src}`} descr={item.title} />
+          return <Artimg key={i} idx={props.idx * i + i} src={`https://ramagg.com/deepartgallery/imgs/${item.src}`} descr={item.title} />
         })
       }
     </div>
