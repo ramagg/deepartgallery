@@ -31,8 +31,8 @@ export default function Artimg(props) {
       {/* <img src={rawData} alt={props.descr} /> */}
       <img src={props.src} alt={props.descr} />
       <div className="actions">
-        <span className="details" onClick={() => setDetails(x => !x)}>Details</span>
-        <span className="imgDwl" onClick={() => window.location = props.src}>Download HD</span>
+        <span className="details" onClick={() => setDetails(x => !x)}><i className="fa fa-info"></i> Details</span>
+        <a className="imgDwl" href={props.src} download><i className="fa fa-download"></i> Download HD</a>
         <div className={details ? "showDetails" : 'hide'} id={props.idx}>
           <span className="imgTitle">{props.descr}</span>
           <span className="imgOrg">Orignal:</span>
