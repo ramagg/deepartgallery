@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import ImageColumn from './ImageColumn'
 
-const grupArr = arr => {
+const parseData = (arr) => {
   let startArr = arr
+
   let lenSA = startArr.length
   let grupedArr = []
   let columns = 4
@@ -16,20 +17,26 @@ const grupArr = arr => {
 }
 
 function App() {
-  const [dataurl, setdataurl] = useState({ imgs: [] })
-
-  const getData = () => {
-    fetch('https://ramagg.com/deepartgallery/imgs/')
-      .then(response => response.json())
-      .then(data => {
-        setdataurl(data)
-      })
-  }
+  const [dataurl, setdataurl] = useState([])
 
   useEffect(() => {
+    const getData = async () => {
+      let res = await fetch('https://ramagg.com/deepartgallery/imgs/')
+      let data = await res.json()
+
+      console.log(data)
+      setdataurl(parseData(data.imgs))
+
+      return data
+      //   .then(response => response.json())
+      //   .then(data => {
+      //     setdataurl(grupArr(data.imgs))
+      //   })
+      // console.log('Data:', dataurl)
+      // return
+    }
     getData()
   }, [])
-  let grupedArr = grupArr(dataurl.imgs)
 
   return (
     <div className="App">
@@ -37,7 +44,7 @@ function App() {
         <h1>DeepArtGallery</h1>
       </header>
       <div className="artBox">
-        {grupedArr.map((item, i) => {
+        {dataurl.map((item, i) => {
           return <ImageColumn key={i} idx={i} imgs={item} />
         })}
       </div>

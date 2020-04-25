@@ -6,8 +6,15 @@ export default function Artimg(props) {
   const [rawData, setRawData] = useState(null)
 
   useEffect(() => {
-    fetch(props.url).then(response => {
-      response.arrayBuffer().then(buffer => {
+    const headers = new Headers()
+    const set = {
+      method: 'GET',
+      headers: headers,
+      mode: 'cors',
+      cache: 'default',
+    }
+    fetch(props.url, set).then((response) => {
+      response.arrayBuffer().then((buffer) => {
         var base64Flag = 'data:image/jpeg;base64,'
         var imageStr = arrayBufferToBase64(buffer)
         setRawData(base64Flag + imageStr)
@@ -19,7 +26,7 @@ export default function Artimg(props) {
       var binary = ''
       var bytes = [].slice.call(new Uint8Array(buffer))
 
-      bytes.forEach(b => (binary += String.fromCharCode(b)))
+      bytes.forEach((b) => (binary += String.fromCharCode(b)))
 
       return window.btoa(binary)
     }
@@ -30,7 +37,7 @@ export default function Artimg(props) {
       <img src={rawData} alt={props.descr} />
       {/* <img src={props.src} alt={props.descr} /> */}
       <div className="actions">
-        <span className="details" onClick={() => setDetails(x => !x)}>
+        <span className="details" onClick={() => setDetails((x) => !x)}>
           <i className="fa fa-info"></i> Details
         </span>
         <a className="imgDwl" href={props.src} download>
