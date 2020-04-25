@@ -3,40 +3,21 @@ import React, { useState, useEffect } from 'react'
 export default function Artimg(props) {
   const [show, setShow] = useState(false)
   const [details, setDetails] = useState(false)
-  const [rawData, setRawData] = useState(null)
 
   useEffect(() => {
-    const headers = new Headers()
-    const set = {
-      method: 'GET',
-      headers: headers,
-      mode: 'cors',
-      cache: 'default',
-    }
-    // console.log(props.src)
-    fetch(props.url, set).then((response) => {
-      response.arrayBuffer().then((buffer) => {
-        var base64Flag = 'data:image/jpeg;base64,'
-        var imageStr = arrayBufferToBase64(buffer)
-        setRawData(base64Flag + imageStr)
-        setShow(true)
-        console.log(base64Flag + imageStr)
-      })
-    })
-    function arrayBufferToBase64(buffer) {
-      var binary = ''
-      var bytes = [].slice.call(new Uint8Array(buffer))
+    let img = new Image()
 
-      bytes.forEach((b) => (binary += String.fromCharCode(b)))
-
-      return window.btoa(binary)
+    img.onload = () => {
+      setShow(true)
     }
+    img.src = props.src
   }, [])
+
   return (
     <div className={show ? 'imgContainer' : 'hide'}>
-      {/* <img src={props.src} alt={props.descr} onLoad={setShow(true)} /> */}
-      <img src={rawData} alt={props.descr} />
-      {/* <img src={props.src} alt={props.descr} /> */}
+      {/*  <div className={'imgContainer'}> */}
+      <img src={props.src} alt={props.descr} />
+
       <div className="actions">
         <span className="details" onClick={() => setDetails((x) => !x)}>
           <i className="fa fa-info"></i> Details
