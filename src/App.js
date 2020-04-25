@@ -18,7 +18,7 @@ const parseData = (arr) => {
 
 function App() {
   const [dataurl, setdataurl] = useState([])
-
+  const [show, setShow] = useState(false)
   useEffect(() => {
     const getData = async () => {
       let res = await fetch('https://ramagg.com/deepartgallery/imgs/')
@@ -26,6 +26,7 @@ function App() {
 
       console.log(data)
       setdataurl(parseData(data.imgs))
+      setShow(true)
 
       return data
       //   .then(response => response.json())
@@ -44,9 +45,11 @@ function App() {
         <h1>DeepArtGallery</h1>
       </header>
       <div className="artBox">
-        {dataurl.map((item, i) => {
-          return <ImageColumn key={i} idx={i} imgs={item} />
-        })}
+        {show
+          ? dataurl.map((item, i) => {
+              return <ImageColumn key={i} idx={i} imgs={item} />
+            })
+          : null}
       </div>
     </div>
   )

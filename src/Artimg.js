@@ -13,6 +13,7 @@ export default function Artimg(props) {
       mode: 'cors',
       cache: 'default',
     }
+    // console.log(props.src)
     fetch(props.url, set).then((response) => {
       response.arrayBuffer().then((buffer) => {
         var base64Flag = 'data:image/jpeg;base64,'
@@ -30,7 +31,7 @@ export default function Artimg(props) {
 
       return window.btoa(binary)
     }
-  }, [details, rawData])
+  }, [])
   return (
     <div className={show ? 'imgContainer' : 'hide'}>
       {/* <img src={props.src} alt={props.descr} onLoad={setShow(true)} /> */}
