@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/deepartgallery/static/js/main.66074768.chunk.js",
-    "main.js.map": "/deepartgallery/static/js/main.66074768.chunk.js.map",
+    "main.js": "/deepartgallery/static/js/main.8d3db2d4.chunk.js",
+    "main.js.map": "/deepartgallery/static/js/main.8d3db2d4.chunk.js.map",
     "runtime-main.js": "/deepartgallery/static/js/runtime-main.12f4587f.js",
     "runtime-main.js.map": "/deepartgallery/static/js/runtime-main.12f4587f.js.map",
     "static/js/2.7902ed2c.chunk.js": "/deepartgallery/static/js/2.7902ed2c.chunk.js",
     "static/js/2.7902ed2c.chunk.js.map": "/deepartgallery/static/js/2.7902ed2c.chunk.js.map",
     "index.html": "/deepartgallery/index.html",
-    "precache-manifest.d7f8618f8c8d2852e39b721228305e8f.js": "/deepartgallery/precache-manifest.d7f8618f8c8d2852e39b721228305e8f.js",
+    "precache-manifest.8d974970579303693cf6f346b7fb47e7.js": "/deepartgallery/precache-manifest.8d974970579303693cf6f346b7fb47e7.js",
     "service-worker.js": "/deepartgallery/service-worker.js",
     "static/js/2.7902ed2c.chunk.js.LICENSE.txt": "/deepartgallery/static/js/2.7902ed2c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.12f4587f.js",
     "static/js/2.7902ed2c.chunk.js",
-    "static/js/main.66074768.chunk.js"
+    "static/js/main.8d3db2d4.chunk.js"
   ]
 }

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bc7def1f2cfc2f73e5c6d46c1da2e714",
+    "revision": "2f23efcceb026d185e25ebe7a16dcc70",
     "url": "/deepartgallery/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/deepartgallery/static/js/2.7902ed2c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f90e9a7fb3ab76fb62d7",
-    "url": "/deepartgallery/static/js/main.66074768.chunk.js"
+    "revision": "706a7ba5388e7ab63081",
+    "url": "/deepartgallery/static/js/main.8d3db2d4.chunk.js"
   },
   {
     "revision": "49fffb7dde5737a3b017",
